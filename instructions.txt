@@ -1,6 +1,7 @@
 I file CSV relativi ai movimenti si trovano nella seguente cartella di Dropbox:
+https://www.dropbox.com/sh/zycmvx4k9oqminx/AADOl3I0J_04x59gvBuj0mR7a?dl=0
 
-
+Di seguito le istruzioni da seguire per creare il db:
 
 sqlite3 mc1.db
 create table movFri(ts datetime, id integer, tag text,x integer, y integer);
