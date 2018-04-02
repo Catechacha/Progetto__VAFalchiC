@@ -1,0 +1,20 @@
+{
+  "name": "vastchallenge2015",
+  "version": "1.0.0",
+  "description": "This is my project for the exam Visual Analytics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Caterina Falchi",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "d3": "^3.5.17",
+    "express": "^4.15.3",
+    "sqlite3": "^3.1.8",
+    "nvd3": "^1.8.5"
+  }
+}

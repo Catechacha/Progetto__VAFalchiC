@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check-in & Movement Analysis</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../node_modules/nvd3/build/nv.d3.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/navbar-style.css">
+    <link rel="stylesheet" href="../css/mc1_styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/d3/d3.min.js"></script>
+    <script src="../../node_modules/nvd3/build/nv.d3.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../js/Check-in_Movements/eventDispatcher.js"></script>
+    <script src="../js/Check-in_Movements/toolbar.js"></script>
+    <script src="../js/Check-in_Movements/toolbarArea.js"></script>
+    <script src="../js/Check-in_Movements/toolbarType.js"></script>
+    <script src="../js/Check-in_Movements/chart1.js"></script>
+    <script src="../js/Check-in_Movements/pieChart.js"></script>
+    <script src="../js/Check-in_Movements/hourChart.js"></script>
+    <script src="../js/Check-in_Movements/allChart.js"></script>
+
+    <script>
+        $(function(){
+            $("#navbardiv").load("navbar.html", function(){
+                $('.title').text('Check-in & Movement Analysis');
+            });
+        });
+    </script>
+
+</head>
+<body id="main">
+
+    <header>
+         <!--Here i put my navbar-->
+        <div class="container gradient-background-light-blue container-custom-navbar" id="navbardiv"></div>
+    </header>
+
+    <div class="container container-custom-body">
+            <div class="row">
+                <div id="area" class="col-md-7">
+
+                </div>
+                <div class="col-md-1"></div>
+                <div id="toolbar" class="col-md-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="annotationDay" class="col-xs-11 col-xs-offset-1"></div>
+                    <div id="annotationArea" class="col-xs-11 col-xs-offset-1"></div>
+                    <div id="annotationType" class="col-xs-11 col-xs-offset-1"></div>
+                </div>
+                <div id="type" class="col-md-4">
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px;">
+                <div class="col-md-7">
+                    <div id="chart1" class="col-xs-12" style='display: none;'></div>
+                    <div id="pieChart" class="col-xs-12" style='display: none;'></div>
+                    <div id="hourChart" class="col-xs-12" style = 'display: none;'></div>
+                    <div id="allChart" class="col-xs-12" style = 'display: none;'></div>
+                </div>
+                <div id="parkmap" class="col-md-5"></div>
+            </div>
+    </div>
+    <script src="../js/Check-in_Movements/main.js"></script>
+
+</body>
+</html>

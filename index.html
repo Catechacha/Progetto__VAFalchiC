@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mayhem at DinoFun World</title>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/navbar-style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script>
+        //Load navbar
+        $(function(){
+            $("#navbardiv").load("assets/html/navbar.html", function(){
+                $('.title').text('Mayhem at DinoFun World');
+            });
+        });
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <!--Here i put my navbar-->
+        <div class="container gradient-background-light-blue container-custom-navbar" id="navbardiv"></div>
+    </header>
+
+    <div class="container container-custom-body">
+        <div class="row">
+            <p class="col-md-12 col-xs-12 text-justify">
+                <br>
+                DinoFun World is a typical modest-sized amusement park, sitting on about 215 hectares and hosting
+                thousand of visitors each day. It's very famous for its events: last year one event was a weekend
+                tribute to Scott Jones, an international football star. To celebrate his years of stardom, DinoFun
+                World declared "Scott Jones Weekend" where he was scheduled to appear in two stage shows each on
+                Friday, Saturday and Sunday to talk about his life and career. In addition, a show of memorabilia
+                related to his illustrious career would be displayed in the park's Pavilion.
+                The event did not go as planned: it was marred by crime and mayhem perpetrades by a poor, misguided and
+                disgruntled figure from Scott's past. While the crimes were rapidly solved, park officials and law enforcemenet
+                figures are interested in understanding just what happened during that weekend to better prepare themselves
+                for future events. They are interested in understanding how people move and communicate in the park, as well
+                as how patterns changes and evolve over time, and what can be understood about motivations for changing patterns.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-xs-12 text-center">
+                <a href="/assets/html/GroupAnalysis.html" class="index-link">
+                    <i class="glyphicon glyphicon-stats"></i>
+                    <p>Group Analysis</p>
+                </a>
+            </div>
+            <div class="col-md-4 col-xs-12 text-center">
+                <a href="/assets/html/CheckIn_Movements.html" class="index-link">
+                    <i class="glyphicon glyphicon-move"></i>
+                    <p>Check-in & Mov Analysis</p>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-xs-12 text-center">
+                <a href="/assets/html/CreightonPavilion.html" class="index-link">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    <p>Creighton Pavilion Analysis</p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="container col-xs-6 col-xs-offset-3">
+                <div id="myCarousel" class="carousel slide " data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner ">
+                        <div class="item active col-xs-12">
+                            <img src="assets/img/carousel_1.PNG" style="width:100%; height: 250px">
+                        </div>
+
+                        <div class="item col-xs-12">
+                            <img src="assets/img/carousel_2.jpg" style="width:100%; height: 250px">
+                        </div>
+
+                        <div class="item col-xs-12">
+                            <img src="assets/img/carousel_3.jpg" style="width:100%; height: 250px">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

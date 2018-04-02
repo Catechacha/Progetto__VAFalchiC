@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creighton Pavilion Analysis</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../node_modules/nvd3/build/nv.d3.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/navbar-style.css">
+    <link rel="stylesheet" href="../css/mc1_styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/d3/d3.min.js"></script>
+    <script src="../../node_modules/nvd3/build/nv.d3.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../js/Creighton_Pavilion/chart.js"></script>
+    <script>
+        $(function(){
+            $("#navbardiv").load("navbar.html", function(){
+                $('.title').text('Creighton Pavilion Analysis');
+            });
+        });
+    </script>
+
+</head>
+<body id="main">
+
+    <header>
+        <!--Here i put my navbar-->
+        <div class="container gradient-background-light-blue container-custom-navbar" id="navbardiv"></div>
+    </header>
+
+    <div class="container container-custom-body">
+        <div class="row">
+            <p class="col-md-8 text-justify">
+                <br>
+                This chart show the trendline of Check-in in Creighton Pavilion.
+            </p>
+        </div>
+        <div class="row">
+            <div id="chart"> </div>
+        </div>
+
+    </div>
+    <script src="../js/Creighton_Pavilion/main.js"></script>
+</body>
+</html>

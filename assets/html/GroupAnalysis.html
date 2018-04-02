@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Analysis</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../node_modules/nvd3/build/nv.d3.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/navbar-style.css">
+    <link rel="stylesheet" href="../css/mc1_styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/d3/d3.min.js"></script>
+    <script src="../../node_modules/nvd3/build/nv.d3.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../js/Groups/toolbar.js"></script>
+    <script src="../js/Groups/personGroups.js"></script>
+    <script src="../js/Groups/eventDispatcher.js"></script>
+    <script src="../js/Groups/chartGroup.js"></script>
+
+    <script>
+        $(function(){
+            $("#navbardiv").load("navbar.html", function(){
+                $('.title').text('Groups analysis');
+            });
+        });
+    </script>
+
+</head>
+<body id="main">
+
+    <header>
+        <!--Here i put my navbar-->
+        <div class="container gradient-background-light-blue container-custom-navbar" id="navbardiv"></div>
+    </header>
+
+    <div class="container container-custom-body">
+
+        <div class="row">
+
+            <div id="annotationDay" class="col-md-2 " style="height:50px; margin-top: 20px;"></div>
+            <div id="annotationGroup" class="col-md-5" style="height:50px; margin-top: 20px;"></div>
+            <div class="col-md-1"></div>
+            <div id="toolbar" class="col-md-4"></div>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div id="chart" class="col-md-7" style="height: 440px";></div>
+            <div class="col-md-1"></div>
+            <div id="persons" class="col-md-4 pull-right" style="height:450px">
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/Groups/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+I file CSV relativi ai movimenti si trovano nella seguente cartella di Dropbox:
+
+
+
+sqlite3 mc1.db
+create table movFri(ts datetime, id integer, tag text,x integer, y integer);
+create table movSat(ts datetime, id integer, tag text,x integer, y integer);
+create table movSun(ts datetime, id integer, tag text,x integer, y integer);
+.separator ","
+.import park-movement-Fri.csv movFri
+.import park-movement-Sat.csv movSat
+.import park-movement-Sun.csv movSun
+delete from movFri where ts="Timestamp";
+delete from movSat where ts="Timestamp";
+delete from movSun where ts="Timestamp";
+delete from movSun where tag ISNULL;
+create index if not exists idx_movFri_id on movFri(id);
+create index if not exists idx_movSat_id on movSat(id);
+create index if not exists idx_movSun_id on movSun(id);
+create index if not exists idx_movFri_tag on movFri(tag);
+create index if not exists idx_movSat_tag on movSat(tag);
+create index if not exists idx_movSun_tag on movSun(tag);
+create index if not exists idx_movFri_ts on movFri(ts);
+create index if not exists idx_movSat_ts on movSat(ts);
+create index if not exists idx_movSun_ts on movSun(ts);
+create table groupFri(id integer,"group" integer);
+create table groupSat(id integer,"group" integer);
+create table groupSun(id integer,"group" integer);
+.separator ";"
+.import groupFri.csv groupFri
+.import groupSat.csv groupSat
+.import groupSun.csv groupSun

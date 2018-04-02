@@ -1,0 +1,10 @@
+.park-map {
+    background: url(../Park_Map.jpg) no-repeat;
+    background-size: contain;
+  /*  height: 646px;
+    width: 651px;*/
+    height: 430px;
+    width: 434px;
+    margin:15px;
+    padding:0;
+}
